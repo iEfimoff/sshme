@@ -103,34 +103,3 @@
 * **openssh_unforwardInStreamLocal**(< _string_ >socketPath, < _function_ >callback) - _boolean_ - OpenSSH extension that unbinds from a UNIX domain socket at `socketPath` on the server and stops forwarding incoming connections. `callback` has 1 parameter: < _Error_ >err. Returns `false` if you should wait for the `continue` event before sending any more traffic.
 
 * **openssh_forwardOutStreamLocal**(< _string_ >socketPath, < _function_ >callback) - _boolean_ - OpenSSH extension that opens a connection to a UNIX domain socket at `socketPath` on the server. `callback` has 2 parameters: < _Error_ >err, < _Channel_ >stream. Returns `false` if you should wait for the `continue` event before sending any more traffic.
-
-### Server
-
-#### Server events
-
-* **connection**(< _Connection_ >client, < _object_ >info) - A new client has connected. `info` contains the following properties:
-
-    * **ip** - _string_ - The remoteAddress of the connection.
-
-    * **header** - _object_ - Information about the client's header:
-
-        * **identRaw** - _string_ - The raw client identification string.
-
-        * **versions** - _object_ - Various version information:
-
-            * **protocol** - _string_ - The SSH protocol version (always `1.99` or `2.0`).
-
-            * **software** - _string_ - The software name and version of the client.
-
-        * **comments** - _string_ - Any text that comes after the software name/version.
-
-    Example: the identification string `SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2` would be parsed as:
-
-```js
-        { identRaw: 'SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2',
-          version: {
-            protocol: '2.0',
-            software: 'OpenSSH_6.6.1p1'
-          },
-          comments: 'Ubuntu-2ubuntu2' }
-```
