@@ -4,14 +4,14 @@
     "privateKeyPath": "C:/Users/Efimov_IA/Documents/ssh_priv.ppk"
 },{
     "host": "cluster-co02.dns.best.com",
-    "username": "tomcat",
+    "username": "docker",
     "privateKeyPath": "C:/Users/Efimov_IA/Documents/ssh_priv.ppk"
 },{
     "host": "cluster-ui01.dns.best.com",
-    "username": "tomcat",
+    "username": "docker",
     "privateKeyPath": "C:/Users/Efimov_IA/Documents/ssh_priv.ppk"
 },{
     "host": "cluster-ui02.dns.best.com",
-    "username": "tibero",
+    "username": "docker",
     "privateKeyPath": "C:/Users/Efimov_IA/Documents/ssh_priv.ppk"
 }]
