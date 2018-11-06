@@ -1,5 +1,31 @@
 # sshme
 
+The simple utility allows you to perform bash commands on a cluster described in the hosts.json file.
+To configure your cluster you have to change the hosts.json file.
+
+Filter hosts before run commands:
+> .
+[ 'cluster-co01.dns.best.com',
+  'cluster-co02.dns.best.com',
+  'cluster-ui01.dns.best.com',
+  'cluster-ui02.dns.best.com' ]
+
+> co
+[ 'cluster-co01.dns.best.com',
+  'cluster-co02.dns.best.com' ]
+
+> co hostname
+> cluster-co01.dns.best.com:
+cluster-co01.dns.best.com
+
+> cluster-co02.dns.best.com:
+cluster-co02.dns.best.com
+
+
+Dependencies:
+- node js
+- ssh2 node js module - https://github.com/mscdex/ssh2
+
 * **connect**(< _object_ >config) - _(void)_ - Attempts a connection to a server using the information given in `config`:
 
     * **host** - _string_ - Hostname or IP address of the server. **Default:** `'localhost'`
