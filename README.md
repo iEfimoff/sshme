@@ -21,6 +21,13 @@ cluster-co01.dns.best.com
 
 > cluster-co02.dns.best.com:
 cluster-co02.dns.best.com
+
+> co0[1]|ui01 hostname
+> cluster-co01.dns.best.com:
+cluster-co01.dns.best.com
+
+> cluster-ui01.dns.best.com:
+cluster-ui01.dns.best.com
 ```
 
 Dependencies:
